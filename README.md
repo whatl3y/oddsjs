@@ -11,6 +11,10 @@ are done, but you can convert to a javascript string or number using
 [`toFixed(n)`](https://mikemcl.github.io/bignumber.js/#toFix),
 [`toNumber()`](https://mikemcl.github.io/bignumber.js/#toN), or others.
 
+## Install
+
+`npm install --save oddsjs`
+
 ## Usage
 
 This package exposes a factory function `Odds(options)` that takes an optional options object.
@@ -29,6 +33,7 @@ This package exposes a factory function `Odds(options)` that takes an optional o
 
 ```js
 import Odds from 'oddsjs'
+// or const Odds = require('oddsjs').default
 
 const odds = Odds() // same as  `const odds = Odds({ precision: 4 })`
 
