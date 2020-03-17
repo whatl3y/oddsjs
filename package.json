@@ -1,0 +1,30 @@
+{
+  "name": "oddsjs",
+  "version": "0.0.1",
+  "author": "Lance Whatley <whatl3y@gmail.com>",
+  "description": "Calculate the true odds of a single bet or parlay.",
+  "main": "dist/oddsjs.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/whatl3y/oddsjs"
+  },
+  "scripts": {
+    "build": "gulp build",
+    "postinstall": "npm run build",
+    "test": "NODE_ENV=test mocha --exit --require @babel/register --recursive './src/**/*.spec.js'"
+  },
+  "devDependencies": {
+    "@babel/register": "^7.8.3",
+    "mocha": "^5.2.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "bignumber.js": "^9.0.0",
+    "core-js": "^3.6.4",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-plumber": "^1.2.1"
+  },
+  "license": "MIT"
+}
