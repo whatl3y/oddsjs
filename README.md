@@ -4,12 +4,12 @@ This package provides helper methods to convert between different odds types,
 calculate overall odds of single and multiple/parlay bets, etc.
 
 NOTE: All methods in this package return instances of the main object in
-(bignumber.js, or `BigNumber` in their examples)[https://www.npmjs.com/package/bignumber.js].
+[bignumber.js, or `BigNumber` in their examples](https://www.npmjs.com/package/bignumber.js).
 This is to prevent losing precision when returning final odds before all of your desired transformations
 are done, but you can convert to a javascript string or number using
-(`toString()`)[https://mikemcl.github.io/bignumber.js/#toS],
-(`toFixed(n)`)[https://mikemcl.github.io/bignumber.js/#toFix],
-(`toNumber()`)[https://mikemcl.github.io/bignumber.js/#toN], or others.
+[`toString()`](https://mikemcl.github.io/bignumber.js/#toS),
+[`toFixed(n)`](https://mikemcl.github.io/bignumber.js/#toFix),
+[`toNumber()`](https://mikemcl.github.io/bignumber.js/#toN), or others.
 
 ## Usage
 
