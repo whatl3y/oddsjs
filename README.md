@@ -3,14 +3,6 @@
 This package provides helper methods to convert between different odds types,
 calculate overall odds of single and multiple/parlay bets, etc.
 
-NOTE: All methods in this package return instances of the main object in
-[bignumber.js, or `BigNumber` in their examples](https://www.npmjs.com/package/bignumber.js).
-This is to prevent losing precision when returning final odds before all of your desired transformations
-are done, but you can convert to a javascript string or number using
-[`toString()`](https://mikemcl.github.io/bignumber.js/#toS),
-[`toFixed(n)`](https://mikemcl.github.io/bignumber.js/#toFix),
-[`toNumber()`](https://mikemcl.github.io/bignumber.js/#toN), or others.
-
 ## Install
 
 `npm install --save oddsjs`
@@ -26,8 +18,9 @@ This package exposes a factory function `Odds(options)` that takes an optional o
 ### Methods
 
 1. `calculateOdds(...americanOdds) => BigNumber`: Takes one or multiple american odds and returns the overall odds. For multiple odds provided it assumes a parlay of events. The total odds can be multiplied by a test wager to see how much would be returned to the bettor if she wins (this amount includes the wager, so total amount returned including the wager amount)
-2. `getAmericanOddsFromOverall(overallOdds) => BigNumber`: Takes overall odds (also the output of `calculateOdds`) and returns a american odds representation of the odds.
-3. `getFractionalOddsFromOverall(overallOdds) => BigNumber`: Takes overall odds (also the output of `calculateOdds`) and returns a fractional odds representation of the odds.
+    - NOTE: `#calculateOdds` returns an instance of the main object in [bignumber.js, or `BigNumber` in their examples](https://www.npmjs.com/package/bignumber.js). This is to prevent losing precision when returning final odds before all of your desired transformations are done, but you can convert to a javascript string or number using [`toString()`](https://mikemcl.github.io/bignumber.js/#toS), [`toFixed(n)`](https://mikemcl.github.io/bignumber.js/#toFix), [`toNumber()`](https://mikemcl.github.io/bignumber.js/#toN), or others.
+2. `getAmericanOddsFromOverall(overallOdds) => String`: Takes overall odds (also the output of `calculateOdds`) and returns a american odds representation of the odds.
+3. `getFractionalOddsFromOverall(overallOdds) => String`: Takes overall odds (also the output of `calculateOdds`) and returns a fractional odds representation of the odds.
 
 ## Example
 
@@ -45,8 +38,8 @@ twoTeamParlayOdds.toNumber()
 // 3.644628099173554
 
 odds.getAmericanOddsFromOverall(twoTeamParlayOdds)
-// +264
+// "+264"
 
 odds.getFractionalOddsFromOverall(twoTeamParlayOdds)
-// 320/121
+// "320/121"
 ```
